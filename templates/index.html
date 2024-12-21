@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de BBCodes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f8ff;
+    }
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+    }
+    footer a {
+      color: #0044cc;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-primary text-white text-center py-4">
+    <h1>Centro de Recursos Humanos</h1>
+    <p class="mb-0">Guarnição de Segurança Militar</p>
+  </header>
+  
+  <main class="container mt-5">
+    <h2 class="text-center text-primary mb-4">Gerador de BBCodes</h2>
+    
+    <form action="/" method="post">
+      <div class="mb-3">
+        <label for="equipe" class="form-label">Equipe:</label>
+        <input type="text" id="equipe" name="equipe" class="form-control" placeholder="Informe o nome da equipe..." required>
+      </div>
+
+      <div class="mb-3">
+        <label for="artigo" class="form-label">Artigo:</label>
+        <select id="artigo" name="artigo" class="form-select" required>
+          <option value="" disabled selected>Selecione o artigo...</option>
+          <option value="Alerta">Artigo 03 – Alerta</option>
+          <option value="Notificação Interna">Artigo 04 – Notificação Interna</option>
+          <option value="Advertência Escrita">Artigo 05 – Advertência Escrita</option>
+          <option value="Remoção">Artigo 06 – Remoção</option>
+          <option value="Exoneração">Artigo 07 – Exoneração</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="motivo" class="form-label">Motivo:</label>
+        <textarea id="motivo" name="motivo" class="form-control" rows="4" placeholder="Descreva o motivo..." required></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="bbcode" class="form-label">BBCode Gerado:</label>
+        <textarea id="bbcode" name="bbcode" class="form-control" rows="6" readonly></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Gerar BBCode</button>
+    </form>
+  </main>
+  
+  <footer class="mt-5 py-3 bg-light">
+    <p>Sistema desenvolvido por <strong>2R8</strong></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
